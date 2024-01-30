@@ -1,0 +1,5 @@
+URL for page on cPanel Hosting
+https://oliverb.sgedu.site/assignment_1/index.html
+
+URL for page on GitHub hosting
+https://bell-oh.github.io/cs20/assignment_1/

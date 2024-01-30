@@ -1,0 +1,12 @@
+Oliver Bello
+assignment_1
+
+1. Name one thing you like about using GitHub and one about using Cpanel hosting.
+    What I like about GitHub hosting is how I don't have to manually upload any
+    files when I make changes to them. I can just push my changes to GitHub and 
+    my site will be updated.
+    I like how cPanel hosting is fast and easy to use.
+    
+2. What was the most satisfying part of this assignment?
+    The most satisfying part of this assignment was going to the URL and seeing
+    my site there.

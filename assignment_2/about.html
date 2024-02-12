@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Oliver's Art Gallery</title>
+        <meta name=‘viewport’ content=“width=device-width, initial-scale=1”>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <style>
+            @media (min-width: 640px) {
+                
+            }
+            @media (min-width: 768px) {
+                
+            }
+            @media (min-width: 1024px) {
+                
+            }
+            form {display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 100%; max-width: 600px; flex-grow: 1; gap: 30px; font-size: 1.25rem; font-family: 'Montserrat', sans-serif;}
+            .form-input {display: flex; flex-direction: column; width: 275px; justify-content: flex-start; gap: 5px;}
+            input, textarea {border: 2px solid #919191; border-radius: .25rem; font-size: 20px; font-family: 'Montserrat', sans-serif; padding: 8px}
+            input:focus, textarea:focus {border: 2px solid #1342D8;}
+            .form-basic {display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; width: 100%}
+            #form-message {width: 100%; height: auto;}
+            #submit {width: max-content;}
+            #submit:hover {border: 2px solid #1342D8}
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img 
+                    title="Logo" 
+                    src="images//logo.jpeg" 
+                    alt="Logo" 
+                    align="left"
+                    width="100px"
+                > 
+                <p id="header-title">Oliver's Art Gallery</p>  
+            </a>
+            <ul id="header-nav">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+           <div id="hamburger">
+                <div id="dropdown">
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="2" y1="2" x2="32" y2="2" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="2" y1="14" x2="32" y2="14" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="2" y1="26" x2="32" y2="26" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+           </div> 
+        </header>
+        <div class="container">
+            <h1>About</h1>
+            <p class="paragraph">Oliver's Art Gallery is an online gallery featuring works by Oliver Bello. Oliver is a student, designer, artist, and programmer based in the Boston, MA area.</p>
+        </div>
+
+        <footer>
+            <p>&copy; Oliver Bello 2024</p>
+            <ul>
+                <li><a href="https://www.instagram.com/superbowie_" target="_blank">Instagram</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

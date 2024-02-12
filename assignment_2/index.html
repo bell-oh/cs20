@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Oliver's Art Gallery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <style>
+            #hero {height: 500px; width:auto; padding: 80px 20px; margin-top: 20px;}
+            .grid {display: grid; grid-template-columns: repeat(1, 1fr); grid-template-rows: 1fr auto; gap: 50px; width: 100%}
+            @media (min-width: 640px) {
+                .grid {grid-template-columns: repeat(2, 1fr);}
+            }
+            @media (min-width: 768px) {
+                .grid {grid-template-columns: repeat(3, 1fr);}
+            }
+            @media (min-width: 1024px) {
+                .grid {grid-template-columns: repeat(4, 1fr);}
+            }
+            .grid-item {display: flex; flex-direction: column; align-items: center;}
+            .grid-item div {height: 200px; width: 200px; border: 3px solid #1342D8; transition-duration: 500ms;}
+            .grid-item div:hover {border-radius: 2rem; transition-duration: 500ms;}
+            #grid-item-1 div {background-image: url(images/mistrust.jpeg); background-size: cover;}
+            #grid-item-2 div {background-image: url(images/connection.jpeg); background-size: cover;}
+            #grid-item-3 div {background-image: url(images/dead_flowers.jpeg); background-size: cover;}
+            #grid-item-4 div {background-image: url(images/joey.jpeg); background-size: cover;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img 
+                    title="Logo" 
+                    src="images//logo.jpeg" 
+                    alt="Logo" 
+                    align="left"
+                    width="100px"
+                > 
+                <p id="header-title">Oliver's Art Gallery</p>  
+            </a>
+            <ul id="header-nav">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+           <div id="hamburger">
+                <div id="dropdown">
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="2" y1="2" x2="32" y2="2" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="2" y1="14" x2="32" y2="14" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="2" y1="26" x2="32" y2="26" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+           </div> 
+        </header>
+        <div id="hero class="container">
+            <h1>Welcome to my art gallery!</h1>
+        </div>
+        <div class="container">
+            <div>
+                <h2>Portfolio</h2>
+                <div class="grid">
+                    <div class="grid-item" id="grid-item-1">
+                        <a href="portfolio/mistrust.html"><div></div></a>
+                        <a href="portfolio/mistrust.html"><h3>Mistrust</h3></a>
+                    </div>
+                    <div class="grid-item" id="grid-item-2">
+                        <a href="portfolio/connection.html"><div></div></a>
+                        <a href="portfolio/connection.html"><h3>Connection</h3></a>
+                    </div>
+                    <div class="grid-item" id="grid-item-3">
+                        <a href="portfolio/dead_flowers.html"><div></div></a>
+                        <a href="portfolio/dead_flowers.html"><h3>Dead Flowers</h3></a>
+                    </div>
+                    <div class="grid-item" id="grid-item-4">
+                        <a href="portfolio/joey.html"><div></div></a>
+                        <a href="portfolio/joey.html"><h3>Joey</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; Oliver Bello 2024</p>
+            <ul>
+                <li><a href="https://www.instagram.com/superbowie_" target="_blank">Instagram</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+body {margin: 0; font-family: sans-serif;}
+header {display: flex; align-items:center; justify-content: space-between; height: 150px; padding-left: 20px; padding-right: 20px; border-bottom: 5px solid #1342D8;}
+header a {display: flex; align-items: center; color: #000000; font-family: 'Outfit', sans-serif; font-weight: 400;}
+header img {padding: 1rem;}
+header li {list-style: none;}
+#header-title {font-size: 1.5rem; font-family: 'Outfit'; font-weight: 400;}
+#header-nav li a, #dropdown li a {font-size: 1.5rem;}
+#header-nav {display: none;}
+@media (min-width: 640px) {
+    header {padding-left: 50px; padding-right: 50px;}
+    #header-title {font-size: 2rem;}
+    #hamburger {display: none !important; visibility: hidden;} 
+    #header-nav {display: flex; flex-direction: row; gap: 30px}
+}
+#hamburger {position: relative; display: flex; margin-left: 30px;}
+#hamburger #dropdown {display: none}
+#hamburger:hover #dropdown {position: absolute; right: 0; top: 100%; display: inline; background-color: #FFFFFF; transition-duration: 500ms;}
+#hamburger:hover #dropdown ul {display: flex; flex-direction: column; align-items: center; justify-content: start;  justify-items: start; margin: 0; padding: 0; transition-duration: 500ms;}
+#hamburger:hover #dropdown ul li {display: inherit; padding: 10px 20px; transition-duration: 500ms;}
+h1 {text-align: center; font-family: 'Outfit', sans-serif; font-weight: 400; padding-top: 20px; padding-bottom: 50px}
+h2 {font-family: 'Outfit', sans-serif; font-weight: 500;}
+h3 {font-family: 'Outfit', sans-serif; font-weight: 400;}
+p {font-family: 'Montserrat', sans-serif; font-weight: 400;}
+a { text-decoration: none; color: #000000}
+a:hover {color: #1342D8}
+.paragraph {font-family: 'Montserrat', sans-serif; font-weight: 400;}
+.italic {font-style: italic;}
+.container {display: flex; flex-direction: column; align-items: center; padding: 20px 50px 50px;}
+.single-image-view {display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px;}
+.image-details {display: flex; flex-direction: column; text-align: left;}
+.image-details h1 {text-align: left; padding: 0}
+footer {display: flex; justify-content: space-between; padding: 20px 50px; font-family: 'Outfit', sans-serif;}
+footer li {list-style: none;}
+footer p {font-family: 'Outfit', sans-serif;}

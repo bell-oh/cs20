@@ -1,0 +1,10 @@
+1. The most satisfying part of this assignment was making the corners rounded 
+on hover for the portfolio pieces on the home page. It was especially 
+satisfying once I added a transition duration of half a second to make the
+animation smooth.
+
+2. The most challenging part of this assignment was making the responsive 
+navigation menus in the header of the website. It was very difficult to keep
+track of each element's display value since there were nested elements and
+ultimately I had to use !important to make sure the hamburger menu would not
+be displayed on larger screens.

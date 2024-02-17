@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+        <title>Order | Joe's Hotdog Stand</title>
+        <style>
+            body {font-family: 'JetBrains Mono', monospace; font-weight: normal; font-size: 20px; background-color: #ffd875; background-image: url(HotDog.png); background-size: 100px; background-repeat: space;}
+            #thankyou {text-align: center; background-color: #ffd875; padding: 20px}
+            h1 {font-size: 24px; font-weight: normal; text-transform: uppercase; padding: 0; text-align: center;}
+            h2 {font-size: 20px; font-weight: normal; text-transform: uppercase; padding: 0}
+            .container {display: flex; flex-direction: column; align-items: center; padding: 100px; gap: 50px}
+            #receipt {display: flex; flex-direction: column; background-image: url(marjan-blan-_kUxT8WkoeY-unsplash.jpg); background-size: cover; background-color: #FFFFFF; background-blend-mode: multiply; width: 250px; padding: 30px}
+            #items {display: flex; flex-direction: row; justify-content: space-between; width: 100%; line-height: .75rem;}
+            #quantity-item {display: flex; flex-direction: row; justify-content: right; gap: 40px}
+            #quantity, #item {text-align: left;}
+            #cost {text-align: right;}
+            .totals {display: flex; flex-direction: row; align-items: center; justify-content: right; gap: 40px; justify-self: right; line-height: .5rem;}
+            @media (min-width: 768px) {
+                body, h2 {font-size: 28px}
+                h1 {font-size: 32px;}
+                #receipt {width: 600px; padding: 60px}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p id="thankyou">Thanks for ordering at Joe's. See you next time!</p>
+            <div id="receipt">
+                <h1>Joe's Hotdog Stand</h1>
+                <div id="items">
+                    <script>
+                        console.log("start");
+                        function showMoney(floatNum) {
+                            result = ((Math.round(floatNum * 100))/100).toString();
+                            if (result.includes('.')) {
+                                if (result.length % 2 == 0 && result[1] != '.')  {
+                                    result += "0";
+                                }
+                            } else {
+                                result += ".00"
+                            }
+                            return result;
+                        }
+
+                        console.log("second");
+                        
+                        names = ["hotdog", "fries", "soda"]
+                        prices = [4.65, 3.75, 1.89];
+                        quantities = [0, 0, 0];
+
+                        console.log("third " + quantities.length);
+
+                        for (i = 0; i < quantities.length; i++) {
+                            quantities[i] = prompt(`Enter quantity of ${names[i]}:`);
+                        }
+                        console.log("fourth");
+                        
+                        subtotDogs = showMoney(quantities[0] * prices[0]);
+                        subtotFries = showMoney(quantities[1] * prices[1]);
+                        subtotSoda = showMoney(quantities[2] * prices[2]);
+
+                        subtotal = showMoney(Number(subtotDogs) + Number(subtotFries) + Number(subtotSoda));
+
+                        document.write(`<div id='quantity-item'><div id='quantity'><h2>Qty</h2><p>${quantities[0]}</p><p>${quantities[1]}</p><p>${quantities[3]}</p></div><div id="item"><h2>Item</h2><p>Hotdog</p><p>Fries</p><p>Soda</p></div></div>`);
+                        document.write(`<div id="cost"><h2>Cost</h2><p>${subtotDogs}</p><p>${subtotFries}</p><p>${subtotSoda}</p></div>`);
+                    </script>
+                </div>
+                <div class="totals">
+                    <h2>Subtotal</h2>
+                    <p>
+                        <script>
+                            document.write(subtotal);
+                        </script>
+                    </p>
+                </div>
+                <script>
+                    if (subtotal > 25) {
+                        console.log("here");
+                        subtotal = showMoney(subtotal * .9);
+                        document.write(`<div class='totals'><h2>Discount</h2><p>-${showMoney(subtotal * .1)}</p></div><div class='totals'><h2>Subtotal</h2><p>${subtotal}</p></div>`);
+                    }
+                </script>
+                <div class="totals">
+                    <h2>MA Tax</h2>
+                    <script>
+                        tax = showMoney(subtotal * .0625);
+                        document.write(`<p>+${tax}</p>`);
+                    </script>
+                </div>
+                <div class="totals">
+                    <h2>Total</h2>
+                    <script>
+                        total = showMoney(Number(tax) + Number(subtotal))
+                        document.write(`<p>${total}</p>`)
+                    </script>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        
+    </body>
+</html>

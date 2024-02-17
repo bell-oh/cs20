@@ -34,18 +34,12 @@
                     <script>
                         function showMoney(floatNum) {
                             result = ((Math.round(floatNum * 100))/100).toString();
-                            console.log("raw result: " + result);
                             if (result.includes('.')) {
-                                console.log("has . " + result);
                                 if (result.length % 2 == 0 && result[1] != '.')  {
-                                    console.log("adding 0");
                                     result += "0";
-                                    console.log("new result " + result)
                                 }
                             } else {
-                                console.log("no . " + result);
                                 result += ".00"
-                                console.log("new result " + result)
                             }
                             return result;
                         }

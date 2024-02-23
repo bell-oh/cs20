@@ -33,14 +33,16 @@
                 <div id="items">
                     <script>
                         function showMoney(floatNum) {
+                            console.log("before showMoney: " + floatNum)
                             result = ((Math.round(floatNum * 100))/100).toString();
                             if (result.includes('.')) {
-                                if (result.length % 2 == 0 && result[1] != '.')  {
+                                if (result[result.length - 2] == ".")  {
                                     result += "0";
                                 }
                             } else {
                                 result += ".00"
                             }
+                            console.log("after showMoney: " + result)
                             return result;
                         }
             
@@ -71,7 +73,6 @@
                 </div>
                 <script>
                     if (subtotal > 25) {
-                        console.log("here");
                         subtotal = showMoney(subtotal * .9);
                         document.write(`<div class='totals'><h2>Discount</h2><p>-${showMoney(subtotal * .1)}</p></div><div class='totals'><h2>Subtotal</h2><p>${subtotal}</p></div>`);
                     }

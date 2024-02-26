@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe 4</title>
+    <style>
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          padding-top: 30px;
+        }
+        #board {
+          display: grid;
+          grid-template-columns: repeat(3, 100px);
+          grid-template-rows: repeat(3, 100px);
+          gap: 10px;
+        }
+        .square {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          border: 1px solid #000000;
+        }
+        .square:hover {
+          background-color: #ff0000;
+        }
+        p {
+          font-family: sans-serif;
+          font-size: 36px;
+        }
+        h1 {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        #indicator {
+            border: 1px solid #000000;
+            padding: 5px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <button id="start">Start Game</button>
+        <script>
+            function setTurn() {
+                randomNum = Math.floor(Math.random() * 10);
+                if (randomNum > 5) {
+                    turn = "X";
+                } else {
+                    turn = "O";
+                }
+            }
+            setTurn();
+            document.write(`<div id='indicator'>${turn}'s turn</div>`);
+        </script>
+        
+        <div id="board">
+            <script>
+                moves = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+                winConditions = ["", "", "", "", "", "", "", ""];
+                winOrStalemate = false;
+                // Given code to display squares
+                const NUM_SQUARES = 9;
+                for (i = 0; i < NUM_SQUARES; i++) {
+                    id = "sq" + i;
+                    document.write( "<div class='square' id='" + id + "'></div>" );
+                };
+                for (i = 0; i < NUM_SQUARES; i++) {
+                    const squareObj = document.getElementById("sq" + i);
+                    squareObj.onclick = (e) => {
+                        console.log("TURN " + turn)
+                        if (!document.getElementById(e.target.id).innerHTML && !winOrStalemate) {
+                            // Place X/O in square
+                            document.getElementById(e.target.id).innerHTML = turn;
+                            console.log("set square");
+                            // moves.forEach(function() {moves.push(document.getElementById("sq" + i).innerHTML)});
+                            moves[e.target.id.slice(2)] = turn;
+                            console.log("Moves: " + moves);
+                            winConditions[0] = moves[0] + moves[1] + moves[2];
+                            winConditions[1] = moves[3] + moves[4] + moves[5];
+                            winConditions[2] = moves[6] + moves[7] + moves[8];
+                            winConditions[3] = moves[0] + moves[3] + moves[6];
+                            winConditions[4] = moves[1] + moves[4] + moves[7];
+                            winConditions[5] = moves[2] + moves[6] + moves[8];
+                            winConditions[6] = moves[0] + moves[4] + moves[8];
+                            winConditions[7] = moves[2] + moves[4] + moves[6];
+                            console.log("WINCONDITIONS " + winConditions);
+                            if ((winConditions.includes("OOO")) || (winConditions.includes("XXX"))) {
+                                if (winConditions.includes("OOO")) {
+                                    win = "O";
+                                } else {
+                                    win = "X";
+                                }
+                                document.getElementById("indicator").innerHTML = win + " wins!";
+                                winOrStalemate = true;
+                                clearBoard();
+                            } else if (!moves.includes("-")) {
+                                document.getElementById("indicator").innerHTML = "Stalemate";
+                                winOrStalemate = true;
+                                clearBoard();
+                            } else {
+                                if (turn == "X") {
+                                    turn = "O";
+                                } else {
+                                    turn = "X"
+                                };
+                                document.getElementById("indicator").innerHTML = turn + "'s turn";
+                                winOrStalemate = false;
+                            }
+                        }  
+                    };
+                }
+                function clearBoard() {
+                    for (i = 0; i < NUM_SQUARES; i++) {
+                        document.getElementById("sq" + i).innerHTML = "";
+                    };
+                    moves = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+                    setTurn();
+                }
+                function startGame() {
+                    winOrStalemate = false;
+                    clearBoard();
+                    document.getElementById("indicator").innerHTML = turn + "'s turn";
+                }
+                const game = document.getElementById("start");
+                game.onclick = startGame;
+            </script>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -121,7 +121,7 @@
                     for (i = 0; i < NUM_SQUARES; i++) {
                         document.getElementById("sq" + i).innerHTML = "";
                     };
-                    moves = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+                    moves.forEach(function() {moves.push("-")});
                     setTurn();
                 }
                 function startGame() {

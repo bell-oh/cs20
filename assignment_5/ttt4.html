@@ -75,14 +75,16 @@
                 for (i = 0; i < NUM_SQUARES; i++) {
                     const squareObj = document.getElementById("sq" + i);
                     squareObj.onclick = (e) => {
-                        console.log("TURN " + turn)
                         if (!document.getElementById(e.target.id).innerHTML && !winOrStalemate) {
                             // Place X/O in square
                             document.getElementById(e.target.id).innerHTML = turn;
-                            console.log("set square");
-                            // moves.forEach(function() {moves.push(document.getElementById("sq" + i).innerHTML)});
-                            moves[e.target.id.slice(2)] = turn;
-                            console.log("Moves: " + moves);
+                            moves.forEach((move, index) => {
+                                if (document.getElementById("sq" + index).innerHTML) {
+                                    moves[index] = document.getElementById("sq" + index).innerHTML;
+                                } else {
+                                    moves[index] = "-";
+                                }
+                            });
                             winConditions[0] = moves[0] + moves[1] + moves[2];
                             winConditions[1] = moves[3] + moves[4] + moves[5];
                             winConditions[2] = moves[6] + moves[7] + moves[8];
@@ -91,7 +93,6 @@
                             winConditions[5] = moves[2] + moves[6] + moves[8];
                             winConditions[6] = moves[0] + moves[4] + moves[8];
                             winConditions[7] = moves[2] + moves[4] + moves[6];
-                            console.log("WINCONDITIONS " + winConditions);
                             if ((winConditions.includes("OOO")) || (winConditions.includes("XXX"))) {
                                 if (winConditions.includes("OOO")) {
                                     win = "O";
@@ -121,10 +122,12 @@
                     for (i = 0; i < NUM_SQUARES; i++) {
                         document.getElementById("sq" + i).innerHTML = "";
                     };
-                    moves.forEach(function() {moves.push("-")});
+                    moves.forEach((move, index) => {moves[index] = "-"});
+                    console.log("moves reset " + moves);
                     setTurn();
                 }
                 function startGame() {
+                    console.log("STARTING GAME");
                     winOrStalemate = false;
                     clearBoard();
                     document.getElementById("indicator").innerHTML = turn + "'s turn";

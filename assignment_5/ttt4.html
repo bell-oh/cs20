@@ -123,11 +123,9 @@
                         document.getElementById("sq" + i).innerHTML = "";
                     };
                     moves.forEach((move, index) => {moves[index] = "-"});
-                    console.log("moves reset " + moves);
                     setTurn();
                 }
                 function startGame() {
-                    console.log("STARTING GAME");
                     winOrStalemate = false;
                     clearBoard();
                     document.getElementById("indicator").innerHTML = turn + "'s turn";

@@ -1,0 +1,10 @@
+The code I am most proud of is the code that clears the board and resets the
+moves array and the turn:
+
+function clearBoard() {
+    for (i = 0; i < NUM_SQUARES; i++) {
+        document.getElementById("sq" + i).innerHTML = "";
+    };
+    moves.forEach((move, index) => {moves[index] = "-"});
+    setTurn();
+}

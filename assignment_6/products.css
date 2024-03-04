@@ -1,0 +1,43 @@
+products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    font-family: 'Madimi One', sans-serif;
+    gap: 2rem;
+    padding: 2%;
+}
+product {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+name {
+    font-weight: bold;
+}
+description {
+    font-style: italic;
+}
+colors {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+color {
+    border: 1px solid #000000;
+    padding: 2%;
+    border-radius: 6px;
+}
+@media (min-width: 640px) {
+    products {
+        grid-template-columns: repeat(2, 1fr);
+    }      
+}
+@media (min-width: 768px) {
+    products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

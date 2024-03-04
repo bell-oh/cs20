@@ -1,0 +1,12 @@
+1. XML is primarily used for transmitting data. You could use it to display a 
+webpage of data about products, items, or people. You can style each part of
+the data using CSS. With JSON, you can also store data about products, or
+whatever else you want. You can turn JSON data into a string using JavaScript
+and then display parts of the string in HTML. You often receive and parse
+JSON data when interacting with APIs and network requests.
+
+2. XML has the advantage of being very easily be styled using CSS. However, a 
+disadvantage of XML is that it is very verbose. JSON uses much less text 
+(and the file sizes are smaller), and smoothly integrates with JavaScript. 
+I prefer JSON because of how compatible it is with JavaScript and how it is 
+less wordy than XML. I find it very easy to read and understand JSON data.

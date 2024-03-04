@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<students>
+    <student>
+        <name>
+            <first>Jill</first>
+            <last>Jones</last>
+        </name>
+        <id>101</id>
+        <grade_average>3.5</grade_average>
+</students>

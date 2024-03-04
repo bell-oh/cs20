@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href = "products.css" ?>
+
+<?xml-stylesheet rel="preconnect" href="https://fonts.googleapis.com"?>
+<?xml-stylesheet rel="preconnect" href="https://fonts.gstatic.com" crossorigin?>
+<?xml-stylesheet rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"?>
+
+<products>
+    <product>
+        <name>Bashful Black and Cream Puppy</name>
+        <description>This little patch pup is doggone irresistible.</description>
+        <price>$28.00</price>
+        <colors>
+            <color>black</color>
+            <color>white</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Cushy Fox</name>
+        <description>A frolicking fox with fiery fur!</description>
+        <price>$24.00</price>
+        <colors>
+            <color>orange</color>
+            <color>white</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Fungi Forager Bunny</name>
+        <description>Be woodland-wise - bunnies are fungi experts!</description>
+        <price>$25.00</price>
+        <colors>
+            <color>brown</color>
+            <color>red</color>
+            <color>gray</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Tumblie Sheep Dog</name>
+        <description>Dog rolling!</description>
+        <price>$30.00</price>
+        <colors>
+            <color>white</color>
+            <color>gray</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Crowning Croaker Green Frog</name>
+        <description>Looking cool in the pool!</description>
+        <price>$17.50</price>
+        <colors>
+            <color>green</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Amuseable Cozi Avocado Mustard</name>
+        <description>Keepin' cosy</description>
+        <price>$17.50</price>
+        <colors>
+            <color>green</color>
+            <color>brown</color>
+            <color>yellow</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Amuseable Sun</name>
+        <description>On a break from lighting up the sky!</description>
+        <price>$60.00</price>
+        <colors>
+            <color>yellow</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Fuddlewuddle Dragon</name>
+        <description>A fluffy fire breather</description>
+        <price>$30.00</price>
+        <colors>
+            <color>green</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Edmund Cream Bear</name>
+        <description>A cheerful chum for chilly days.</description>
+        <price>$26.50</price>
+        <colors>
+            <color>white</color>
+        </colors>
+    </product>
+
+    <product>
+        <name>Yummy Bunny Beige</name>
+        <description>Tiny, tousled, terrific.</description>
+        <price>$20.00</price>
+        <colors>
+            <color>brown</color>
+        </colors>
+    </product>
+</products>

@@ -1,0 +1,5 @@
+The most interesting part of the assignment was filtering the categories. It 
+was very satisfying to hit the button and see the filtered products pop 
+up on the page. I think this is a very useful feature to have on a website,
+and I am glad I now know how to implement filtering so I could use similar
+logic on my midterm or final project.

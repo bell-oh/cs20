@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        button {
+            padding: 5px;
+        }
+        h2 {
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <select id="dropdown">
+            <script>
+                // ensure that html loads
+                $(document).ready(function() {
+                    // get data from json file
+                    $.get(
+                    "https://oliverb.sgedu.site/assignment_7/products.json",
+                    function(data) {
+                        str = JSON.stringify(data);
+                        json = JSON.parse(str);
+                        // read categories
+                        categories = new Set([]);
+                        json.products.forEach(function(product) {
+                            product.colors.forEach(function(color) {
+                                categories.add(color);
+                            })
+                        })
+                        optionString = `<option>Color</option>`;
+                        categories.forEach(function(category) {
+                            optionString += `<option>${category}</option>`;
+                        })
+                        // output categories to html
+                        $("#dropdown").html(optionString);
+
+                        // onclick handler
+                        $("#button").on("click", (function() {
+                            // grab selected option
+                            selectedColor = $("select option:selected").text();
+                            // get colors from each product
+                            resultString = ``;
+                            json.products.forEach(function(product) {
+                                colors = [];
+                                product.colors.forEach(function(color) {
+                                    colors.push(color);
+                                });
+                                // only include colors that match selected color 
+                                if (colors.includes(selectedColor)) {
+                                    resultString += `<h2>${product.name}</h2>`;
+                                }
+                            })
+                            if (resultString == ``) {
+                                resultString += `<h2>No products found.</h2>`;
+                            }
+                            // output filtered colors to html
+                            $("#results").html(resultString);
+                        }))
+                    })
+                })
+            </script>
+        </select>
+        <button id="button">Filter Products</button>
+        <div id="results">
+        </div>
+    </div>
+</body>
+</html>

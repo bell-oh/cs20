@@ -1,0 +1,64 @@
+{
+    "products": [
+        {
+            "name": "Bashful Black and Cream Puppy",
+            "description": "This little patch pup is doggone irresistible.",
+            "price": "$28.00",
+            "colors": ["black", "white"]
+        },
+        {
+            "name": "Cushy Fox",
+            "description": "A frolicking fox with fiery fur!",
+            "price": "$24.00",
+            "colors": ["orange", "white"]
+        },
+        {
+            "name": "Fungi Forager Bunny",
+            "description": "Be woodland-wise - bunnies are fungi experts!",
+            "price": "$25.00",
+            "colors": ["brown", "red", "gray"]
+        },
+        {
+            "name": "Tumblie Sheep Dog",
+            "description": "Dog rolling!",
+            "price": "$30.00",
+            "colors": ["white", "gray"]
+        },
+        {
+            "name": "Crowning Croaker Green Frog",
+            "description": "Looking cool in the pool!",
+            "price": "$17.50",
+            "colors": ["green"]
+        },
+        {
+            "name": "Amuseable Cozi Avocado Mustard",
+            "description": "Keepin' cosy",
+            "price": "$17.50",
+            "colors": ["green", "brown", "yellow"]
+        },
+        {
+            "name": "Amuseable Sun",
+            "description": "On a break from lighting up the sky!",
+            "price": "$60.00",
+            "colors": ["yellow"]
+        },
+        {
+            "name": "Fuddlewuddle Dragon",
+            "description": "A fluffy fire breather",
+            "price": "$30.00",
+            "colors": ["green"]
+        },
+        {
+            "name": "Edmund Cream Bear",
+            "description": "A cheerful chum for chilly days.",
+            "price": "$26.50",
+            "colors": ["white"]
+        },
+        {
+            "name": "Yummy Bunny Beige",
+            "description": "Tiny, tousled, terrific.",
+            "price": "$20.00",
+            "colors": ["brown"]
+        }
+    ]
+}

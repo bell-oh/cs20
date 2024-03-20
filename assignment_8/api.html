@@ -15,13 +15,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             padding: 20px;
             gap: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         #venues-grid {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            font-family: 'Madimi One', sans-serif;
+            font-family: sans-serif;
             gap: 2rem;
             padding: 2%;
         }
@@ -35,9 +39,9 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        @media (min-width: 1200px) {
+        @media (min-width: 1100px) {
             #venues-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
         .venue-card {
@@ -97,6 +101,8 @@
     <div class="container">
         <h1>🏟️ Venues</h1>
         <div id="venues-grid"></div>
+        <h2>ℹ️ Information</h2>
+        <p>This site uses the Ticketmaster API, which gives access to information hosted on ticketmaster.com, such as information about events and venues. This API can be found at <a href="https://developer.ticketmaster.com/">developer.ticketmaster.com</a>. In order to successfully make a GET request, you need to provide in the query string the API key and the number of items you would like to retrieve. In this case, that number was how many venues I wanted to receive information for. This API could be used on a musician's website to display upcoming events. This API could also be used on a travel website to display local venues.</p>
     </div>
     
 </body>

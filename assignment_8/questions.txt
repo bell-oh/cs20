@@ -1,0 +1,7 @@
+The most challenging part of this project was getting the authorization key.
+I thought I could do the authorization through the Postman authorization
+settings but in the end I realized I needed to include the API key in the
+query string. 
+
+The most satisfying part of this project was when the request came back with
+a 200 status and I could see all the JSON data.

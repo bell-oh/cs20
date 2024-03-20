@@ -11,15 +11,127 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <title>CS20 Oliver Bello</title>
         <style>
+            /* blue A3D4FF
+            purple D1A6DD
+            red F89898
+            yellow FCDF88
+            green BAE1AB 
+            orange FAB38D */
+            .container {display: flex; flex-direction: column; justify-content: center; align-items: center;}
             h1, h2 {font-family: 'Outfit', sans-serif;}
-            p {font-family: 'Montserrat', sans-serif;}
+            h1 {padding:50px}
+            body {font-family: 'Montserrat', sans-serif;}
+            a.title {font-weight: bold; text-decoration: none; color: #000000; font-family: 'Outfit', sans-serif; font-size: 24px;}
+            a.title:hover {color: #1342D8}
+            a {color: #000000}
+            .grid {display: grid; grid-template-columns: repeat(1, 1fr); gap: 2rem; max-width: 900px; margin: 60px;}
+            .assignment {display: flex; flex-direction: column; border: 2px solid #1342D8; border-radius: 10px; padding: 20px;}
+            .languages {display: flex; flex-direction: row; gap: 10px}
+            div.languages > p {padding: 5px; border-radius: 5px;}
+            p.html {background-color: #A3D4FF;}
+            p.css {background-color: #BAE1AB;}
+            p.js {background-color: #F89898;}
+            p.xml {background-color: #FCDF88;}
+            p.json{background-color: #FAB38D;}
+            @media (min-width: 800px) {
+                .grid {grid-template-columns: repeat(2, 1fr); margin: 0px 100px;}      
+            }
+            @media (min-width: 1100px) {
+                .grid {grid-template-columns: repeat(3, 1fr);}
+            }
         </style>
     </head>
     <body>
-        <h1>CS20 Oliver Bello</h1>
-        <h2>Spring 2024</h2>
-        <p><a href="assignment_1/index.html">assignment_1</a></p>
-        <p><a href="assignment_2/index.html">assignment_2</a></p>
+        <div class="container">
+            <h1>Web Programming Projects</h1>
+            <div class="grid">
+                <div class="assignment">
+                    <a class="title" href="https://swoodberry13.github.io/Bones_and_Company/home.html">Bones & Company</a>
+                    <div class="languages">
+                        <p class="html">HTML</p>
+                        <p class="css">CSS</p>
+                        <p class="js">JavaScript</p>
+                    </div>
+                    <p>A 7-page vet website in collaboration with Sloan Woodberry, Kelly Tsidji, and Jackie Coughlin.</p>
+                    <a href="https://github.com/swoodberry13/Bones_and_Company">View code</a>
+                </div>
+                <div class="assignment">
+                    <a class="title" href="assignment_8/api.html">Ticketmaster Venues</a>
+                    <div class="languages">
+                        <p class="html">HTML</p>
+                        <p class="css">CSS</p>
+                        <p class="js">JavaScript</p>
+                        <p class="json">JSON</p>
+                    </div>
+                    <p>Practice with the Ticketmaster API. Gets venues and corresponding information using fetch().</p>
+                    <a href="https://github.com/bell-oh/cs20/blob/main/assignment_8/api.html">View code</a>
+                </div>
+                <div class="assignment">
+                    <a class="title" href="assignment_2/index.html">Oliver's Art Gallery</a>
+                    <div class="languages">
+                        <p class="html">HTML</p>
+                        <p class="css">CSS</p>
+                    </div>
+                    <p>A simple site featuring a small sample of my own artwork.</p>
+                    <a href="https://github.com/bell-oh/cs20/tree/main/assignment_2">View code</a>
+                </div>
+                <div class="assignment">
+                    <a class="title" href="assignment_4/index.html">Joe's Hotdog Stand</a>
+                    <div class="languages">
+                        <p class="html">HTML</p>
+                        <p class="css">CSS</p>
+                        <p class="js">JavaScript</p>
+                    </div>
+                    <p>A mock ordering system. Practice with JavaScript.</p>
+                    <a href="https://github.com/bell-oh/cs20/blob/main/assignment_4/index.html">View code</a>
+                </div>
+                <div class="assignment">
+                    <a class="title" href="assignment_5/ttt4.html">Tic Tac Toe</a>
+                    <div class="languages">
+                        <p class="html">HTML</p>
+                        <p class="css">CSS</p>
+                        <p class="js">JavaScript</p>
+                    </div>
+                    <p>An interactive tic tac toe game built with JavaScript.</p>
+                    <a href="https://github.com/bell-oh/cs20/blob/main/assignment_5/ttt4.html">View code</a>
+                </div>
+                <div class="assignment">
+                    <a class="title" href="assignment_6/products.xml">Jellycat Products</a>
+                    <div class="languages">
+                        <p class="css">CSS</p>
+                        <p class="xml">XML</p>
+                    </div>
+                    <p>XML practice!</p>
+                    <a href="https://github.com/bell-oh/cs20/blob/main/assignment_6/products.xml">View code</a>
+                </div>
+                <div class="assignment">
+                    <a class="title" href="assignment_7/products2.html">Jellycat Products JSON</a>
+                    <div class="languages">
+                        <p class="html">HTML</p>
+                        <p class="css">CSS</p>
+                        <p class="json">JSON</p>
+                    </div>
+                    <p>JSON practice!</p>
+                    <a href="https://github.com/bell-oh/cs20/blob/main/assignment_7/products2.html">View code</a>
+                </div>
+                <div class="assignment">
+                    <a class="title" href="assignment_7/products3.html">Jellycat Products Filter</a>
+                    <div class="languages">
+                        <p class="html">HTML</p>
+                        <p class="css">CSS</p>
+                        <p class="js">JavaScript</p>
+                        <p class="json">JSON</p>
+                    </div>
+                    <p>Using JavaScript to filter JSON information.</p>
+                    <a href="https://github.com/bell-oh/cs20/blob/main/assignment_7/products3.html">View code</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
         <p>:)</p>
     </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci API</title>
+</head>
+<body>
+    <script>
+        fetch("https://oliverb.sgedu.site/assignment_php/fibapi.php?num=10&x=91")
+        .then (res => res.text())
+        .then (data =>
+        {
+            data = JSON.parse(data);
+            sequence = data.data;
+            document.write("data: " + sequence);
+            
+        })
+        .catch (error => console.log(error))
+    </script>
+</body>
+</html>

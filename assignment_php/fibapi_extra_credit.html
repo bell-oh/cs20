@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibonacci API</title>
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <h1>Fibonacci Sequence</h1>
+    <form id="form">
+        <input type="number" id="length" name="length" placeholder="Length" />
+        <input type=button id="generate" value="Generate sequence" onClick="generateSequence()" />
+    </form>
+    <p id="data"></p>
     <script>
-        fetch("https://oliverb.sgedu.site/assignment_php/fibapi.php?num=10&x=91")
-        .then (res => res.text())
-        .then (data =>
-        {
-            data = JSON.parse(data);
-            sequence = data.data;
-            document.write("data: " + sequence);
+        function generateSequence() {
+            url = "https://oliverb.sgedu.site/assignment_php/fibapi.php?num=";
+            num = document.getElementById("length").value;
+            url += num;
             
-        })
-        .catch (error => console.log(error))
+            fetch(url)
+            .then (res => res.text())
+            .then (data =>
+            {
+                data = JSON.parse(data);
+                sequence = data.data;
+                output = "data: " + sequence;
+                document.getElementById("data").innerHTML = output;                
+            })
+            .catch (error => console.log(error))
+        }
     </script>
 </body>
 </html>

@@ -10,11 +10,23 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #bde6ff;
+            max-width: max-content;
+            margin: auto;
+            padding: 30px 100px;
+            border-radius: 30px;
+            border: 3px solid #15384d;
         }
         .line {
             display: flex;
             flex-direction: row;
             gap: 10px;
+        }
+        h1 {
+            font-family: cursive;
+            background-color: #ffffff;
+            border-radius: 100%;
+            padding: 25px;
         }
     </style>
 </head>

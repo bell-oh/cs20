@@ -1,0 +1,8 @@
+Times Table (n=1)
+https://oliverb.sgedu.site/assignment_php/times_table.php?n=1
+
+Associative Arrays
+https://oliverb.sgedu.site/assignment_php/associative_arrays.php
+
+Fibonacci Sequence (num=10)
+https://oliverb.sgedu.site/assignment_php/fibapi.php?num=10

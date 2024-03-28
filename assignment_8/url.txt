@@ -1,5 +1,0 @@
-https://oliverb.sgedu.site/assignment_8/api.html
-
-or 
-
-https://bell-oh.github.io/cs20/assignment_8/api.html

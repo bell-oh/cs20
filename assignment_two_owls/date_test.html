@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        date = new Date();
+        hours = date.getHours();
+        mins = date.getMinutes();
+        // Add 20 mins
+        if (mins + 20 >= 60) {
+            hours++;
+            mins = mins + 20 - 60;
+        } else {
+            mins += 20;
+        }
+        // Set AM or PM
+        if (hours >= 12) {
+            am_or_pm = "PM";
+        } else {
+            am_or_pm = "AM";
+        }
+        // Convert to 12hr format
+        if (hours > 12) {
+            hours -= 12;
+        }
+        // Format minutes
+        if (mins <= 9) {
+            minsString = ":0" + mins;
+        } else {
+            minsString = ":" + mins;
+        }
+        pickup_time = hours + minsString + " " + am_or_pm;
+        console.log(pickup_time);
+    </script>
+</body>
+</html>

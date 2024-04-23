@@ -8,16 +8,18 @@
 <body>
     <?php
         // Get data from hidden form fields
-        $eventName = $_GET["eventName"];
-        $artistName = $_GET["artistName"];
-        $venue = $_GET["venue"];
-        $date = $_GET["date"];
-        $localTime = $_GET["localTime"];
-        $city = $_GET["city"];
-        $state = $_GET["state"];
-        $country = $_GET["country"];
-        $url = $_GET["url"];
+        // $eventName = $_GET["eventName"];
+        // $artistName = $_GET["artistName"];
+        // $venue = $_GET["venue"];
+        // $date = $_GET["date"];
+        // $localTime = $_GET["localTime"];
+        // $city = $_GET["city"];
+        // $state = $_GET["state"];
+        // $country = $_GET["country"];
+        // $url = $_GET["url"];
 
+       $events = $_GET['allEvents'];
+       echo $events;
         // echo $eventName;
         // echo $artistName;
         // echo $venue;
@@ -47,11 +49,11 @@
 
         // https://phpdelusions.net/mysqli_examples/insert
         // Create and prepare query
-        $sql = "INSERT INTO `my_list`(`Name`, `Artist`, `Venue`, `Date`, `Time`, `City`, `State`, `Country`, `URL`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        $statement = $conn->prepare($sql);
+        // $sql = "INSERT INTO `my_list`(`Name`, `Artist`, `Venue`, `Date`, `Time`, `City`, `State`, `Country`, `URL`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        // $statement = $conn->prepare($sql);
         // Bind parameters and execute query
-        $statement->bind_param("sssssssss", $eventName, $artistName, $venue, $date, $localTime, $city, $state, $country, $url);
-        $statement->execute();
+        // $statement->bind_param("sssssssss", $eventName, $artistName, $venue, $date, $localTime, $city, $state, $country, $url);
+        // $statement->execute();
     ?>
 </body>
 </html>

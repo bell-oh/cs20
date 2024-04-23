@@ -19,8 +19,8 @@
         // Do an events search with attractionId
 
         // Find and return attractioID
-        async function attractionSearch(url) {
-            await fetch(url)
+        function attractionSearch(url) {
+            fetch(url)
             .then (res => res.text())
             .then (data =>
             {
@@ -31,12 +31,12 @@
                     // Get attractionId
                     id = data._embedded.attractions[0].id;
                     console.log("artist " + id);
-                    console.log("returning");
-                    return id;
+                    // return id;
+                    const response = eventSearch(eventSearchURL); 
                     
                 } else {
                     console.log("No artist found");
-                    return "";
+                    // return "";
                 }
                 
             })
@@ -100,23 +100,26 @@
             // const artists = ["Pink Pantheress", "asdfkjh", "Psychedelic Porn Crumpets", "Adele"];
             const artists = ["adele", "asdkfj"];
             const events = [];
-            console.log("outside for loop")
             for (const artist of artists) {
                 attractionSearchURL = `https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=${artist}&apikey=1IiUV6YIvdbcA2xr6D9bBGrKOIao6VGb&size=1`
                 // Do attraction search to get attractionId
                 // !! Function is not waiting for attraction ID ??
-                const attractionID = await attractionSearch(attractionSearchURL);
-                // !! attractionID comes back as undefined ??
-                console.log("ID: " + attractionID);
+                attractionSearch(attractionSearchURL)
+                .then(attractionID => 
+                    {
+                        console.log("ID: " + attractionID);
+                        if (attractionID != "") {
+                            console.log("searching with attraction ID " + attractionID);
+                            eventSearchURL = `https://app.ticketmaster.com/discovery/v2/events.json?attractionId=${attractionID}&apikey=1IiUV6YIvdbcA2xr6D9bBGrKOIao6VGb&size=1`;
+                            // Do event search
+                            const newEvent = eventSearch(eventSearchURL); 
+                            events.push(newEvent)
+                        }
+                    }
+                    
+                );
 
-                if (attractionID != "") {
-                    console.log("searching with attraction ID " + attractionID);
-                    eventSearchURL = `https://app.ticketmaster.com/discovery/v2/events.json?attractionId=${attractionID}&apikey=1IiUV6YIvdbcA2xr6D9bBGrKOIao6VGb&size=1`;
-                    // Do event search
-                    const newEvent = eventSearch(eventSearchURL); 
-                    events.push(newEvent)
-                }
-
+                
 
                 // Delay to satisfy rate limit (max 5 requests per second)
                 await new Promise(resolve => setTimeout(resolve, 500));

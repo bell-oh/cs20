@@ -28,7 +28,8 @@
                     id = data._embedded.attractions[0].id;
                     eventSearchURL = `https://app.ticketmaster.com/discovery/v2/events.json?attractionId=${id}&apikey=1IiUV6YIvdbcA2xr6D9bBGrKOIao6VGb&size=1`;
                     // Do event search
-                    const response = eventSearch(eventSearchURL); 
+                    const event = eventSearch(eventSearchURL); 
+                    console.log("event " + event)
                     
                 } else {
                     console.log("No artist found");
@@ -47,7 +48,7 @@
                     events = eventData._embedded.events;
 
                     htmlString = ``;
-                    numForms = 0;
+                    // numForms = 0;
             
                     events.forEach((event, index) => {
                         eventName = event.name; 
@@ -60,37 +61,41 @@
                         country = event._embedded.venues[0].country.name;  
                         url = event.url; 
 
-                        formID = "form" + index;
-                        console.log(formID);
+                        // formID = "form" + index;
+                        // console.log(formID);
                         // i give up
 
-                        htmlString += `<form id=${formID} name='event' method='get' action='process_event.php'> <input type='hidden' name='eventName'> <input type='hidden' name='artistName'> <input type='hidden' name='venue'> <input type='hidden' name='date'> <input type='hidden' name='localTime'> <input type='hidden' name='city'> <input type='hidden' name='state'> <input type='hidden' name='country'> <input type='hidden' name='url'> </form>`
+                        // I think i was making a separate form for each event
+                        // htmlString += `<form id=${formID} name='event' method='get' action='process_event.php'> <input type='hidden' name='eventName'> <input type='hidden' name='artistName'> <input type='hidden' name='venue'> <input type='hidden' name='date'> <input type='hidden' name='localTime'> <input type='hidden' name='city'> <input type='hidden' name='state'> <input type='hidden' name='country'> <input type='hidden' name='url'> </form>`
                         
-                        console.log(htmlString);
-                        document.getElementById("mydiv").innerHTML = htmlString;
-
+                        htmlString += `<div><p>${eventName}</p></div>`;
+                        
                         // Fill hidden form fields with data
-                        document.forms[formID]["eventName"].value = eventName;
-                        document.forms[formID]["artistName"].value = artistName; 
-                        document.forms[formID]["venue"].value = venue; 
-                        document.forms[formID]["date"].value = date; 
-                        document.forms[formID]["localTime"].value = localTime; 
-                        document.forms[formID]["city"].value = city; 
-                        document.forms[formID]["state"].value = state; 
-                        document.forms[formID]["country"].value = country; 
-                        document.forms[formID]["url"].value = url; 
+                        // document.forms[formID]["eventName"].value = eventName;
+                        // document.forms[formID]["artistName"].value = artistName; 
+                        // document.forms[formID]["venue"].value = venue; 
+                        // document.forms[formID]["date"].value = date; 
+                        // document.forms[formID]["localTime"].value = localTime; 
+                        // document.forms[formID]["city"].value = city; 
+                        // document.forms[formID]["state"].value = state; 
+                        // document.forms[formID]["country"].value = country; 
+                        // document.forms[formID]["url"].value = url; 
 
-                        numForms++
+                        // numForms++
 
                         // Auto submit form to pass data to PHP
                         // document.forms[formID].submit();
                     })
 
-                    for (i = 0; i < numForms; i++) {
-                        str = "form" + numForms;
-                        console.log("submitting form");
-                        document.forms[str].submit();
-                    }
+                    console.log(htmlString);
+                    return htmlString;
+                    // document.getElementById("mydiv").innerHTML = htmlString;
+
+                    // for (i = 0; i < numForms; i++) {
+                    //     str = "form" + numForms;
+                    //     console.log("submitting form");
+                    //     document.forms[str].submit();
+                    // }
                 })
             .catch (error => console.log(error))
         }

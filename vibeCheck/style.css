@@ -1,0 +1,227 @@
+html {
+    background-color: #689689;
+}
+
+body { 
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .artistBlurb{
+    width: 700px;
+    height: 320px;
+    display: flex;
+
+    background: #F2C1D9;
+    border-radius: 20px;
+  }
+  .artistBlurb img{
+    position: absolute;
+    width: 280px;
+    height: 280px;
+
+    border: 3px solid #F54375;
+    border-radius: 70px;
+  }
+  #topArtists{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0px;
+    gap: 207px 33px;
+
+    position: absolute;
+    width: 1044px;
+    height: 531px;
+    left: 91px;
+    top: 522px;
+  }
+
+
+
+  .artistBlurb h2{
+
+    position: absolute;
+    width: 405px;
+    height: 85px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 85px;
+
+    color: #000000;
+  }
+  .artistBlurb .genres{
+    position: absolute;
+    width: 389px;
+    height: 44px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #FFFFFF;
+
+
+  }
+
+  .logo{
+    padding-left: 10px;
+  }
+  .header {
+    overflow: hidden;
+    background-color: #F54375;
+    padding: 20px 10px;
+  }
+  
+  .header a {
+    float: left;
+    color: #092119;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: #F2C1D9;
+    color: black;
+  }
+  
+  .header a.active {
+    background-color: #F2C1D9;
+    color: black;
+  }
+  
+  .header-right {
+    float: right;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }
+
+  button{
+    border-radius: 30px; 
+    padding: 15px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: #F54375;
+    color: #c9e5dd;
+    border-width: 5px;
+  }
+  button:hover{ 
+    background-color: #F2C1D9; 
+    color: #092119; 
+  }
+
+  p {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#092119; 
+    font-size: 25px;
+    font-style: italic;
+  }
+
+  /* .footer {
+    background-color: #F54375;
+    padding: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  } */
+
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#092119;
+  }
+
+  /*MUSIC NOTE ANIMATION*/
+  .musicNotesAnimation {
+    display: block;
+    color: color:#092119;
+    margin: auto;
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 200px;
+    border: 0px solid #000;
+  }
+  
+  .note-1,
+  .note-2,
+  .note-3,
+  .note-4 {
+    position: absolute;
+    animation: notes 2s infinite linear;
+    font-size: 35px;
+    opacity: 0;
+  }
+  
+  .note-1 {
+    top: 60px;
+    left: 0;
+    animation-delay: 0.5s;
+  }
+  
+  .note-2 {
+    top: 30px;
+    left: 30%;
+    animation-delay: 1s;
+  }
+  
+  .note-3 {
+    top: 90px;
+    left: 60%;
+    animation-delay: 1.5s;
+  }
+  
+  .note-4 {
+    top: 40px;
+    left: 90%;
+    animation-delay: 2s;
+  }
+  
+  @keyframes notes {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5) translate(50%, -50%);
+    }
+    80% {
+      opacity: 0;
+      transform: scale(1.5) translate(100%, -100%);
+    }
+    100% {
+      transform: scale(1.5) translate(100%, -100%);
+      opacity: 0;
+    }
+  }
+
+  
+
+

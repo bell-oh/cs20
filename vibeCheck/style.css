@@ -4,25 +4,13 @@ html {
 
 body { 
     margin: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  .artistBlurb{
-    width: 700px;
-    height: 320px;
-    display: flex;
+  /* #termSelection{
+    color: white; 
+  } */
 
-    background: #F2C1D9;
-    border-radius: 20px;
-  }
-  .artistBlurb img{
-    position: absolute;
-    width: 280px;
-    height: 280px;
-
-    border: 3px solid #F54375;
-    border-radius: 70px;
-  }
   #topArtists{
     display: flex;
     flex-direction: row;
@@ -30,30 +18,43 @@ body {
     align-items: flex-start;
     align-content: flex-start;
     padding: 0px;
-    gap: 207px 33px;
+    gap: 40px 40px;
 
-    position: absolute;
+    /* position: absolute;
     width: 1044px;
     height: 531px;
     left: 91px;
-    top: 522px;
+    top: 300px; */
   }
 
-
+  .artistBlurb{ 
+    width: 320px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    background: #F2C1D9;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 5px;
+  }
+  .artistBlurb img{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border: 3px solid #F54375;
+    border-radius: 30px;
+  }
 
   .artistBlurb h2{
-
-    position: absolute;
-    width: 405px;
-    height: 85px;
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lexend', Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 70px;
-    line-height: 85px;
-
-    color: #000000;
+    font-weight: 400;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0px; 
   }
   .artistBlurb .genres{
     position: absolute;
@@ -76,10 +77,12 @@ body {
   .header {
     overflow: hidden;
     background-color: #F54375;
-    padding: 20px 10px;
+    padding: 10px 20px;
+    font-family: 'Lexend', Verdana, Geneva, Tahoma, sans-serif;
+
   }
   
-  .header a {
+  .header-right a {
     float: left;
     color: #092119;
     text-align: center;
@@ -87,7 +90,13 @@ body {
     text-decoration: none;
     font-size: 18px; 
     line-height: 25px;
-    border-radius: 4px;
+    border-radius: 30px;
+    transition-duration: 300ms;
+  }
+
+  .header h1 a {
+    color: #092119;
+    text-decoration: none;
   }
   
   .header a.logo {
@@ -95,14 +104,14 @@ body {
     font-weight: bold;
   }
   
-  .header a:hover {
+  .header-right a:hover {
     background-color: #F2C1D9;
-    color: black;
+    color: #092119;
   }
   
-  .header a.active {
+  .header-right a.active {
     background-color: #F2C1D9;
-    color: black;
+    color: #092119;
   }
   
   .header-right {
@@ -124,12 +133,13 @@ body {
   button{
     border-radius: 30px; 
     padding: 15px; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lexend', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     text-align: center;
     background-color: #F54375;
     color: #c9e5dd;
     border-width: 5px;
+    transition-duration: 300ms;
   }
   button:hover{ 
     background-color: #F2C1D9; 
@@ -138,7 +148,7 @@ body {
 
   p {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
     color:#092119; 
     font-size: 25px;
     font-style: italic;
@@ -153,8 +163,13 @@ body {
   } */
 
   h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lexend', Verdana, Geneva, Tahoma, sans-serif;
     color:#092119;
+  }
+  h2{
+    font-family: 'Lexend', Verdana, Geneva, Tahoma, sans-serif;
+    color:#092119;
+
   }
 
   /*MUSIC NOTE ANIMATION*/
